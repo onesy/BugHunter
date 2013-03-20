@@ -12,7 +12,8 @@ $ClassLoadList = array();
 //0 = 直接路径加载
 //1 = 按照预订格式进行加载
 //2 = 按照目录行加载
-$ClassLoadList[PROJECT_BASE . ''] = 0;
+//3 = 加载全部层和工具
+$ClassLoadList[PROJECT_ROOT . ''] = 0;
 
 define('ClassToLoad', $ClassLoadList);
 ?>
