@@ -30,13 +30,14 @@ class ClassLoader {
     private function load($urls = array()) {
         if (is_array($urls) && !empty($urls)) {
             foreach ($urls as $url => $method) {
-                $this->loadAsMethod($url, $method);
+                $this->loadAsMethod($method, $url);
             }
         }
     }
 
     private function loadAsMethod($methodCode, $url = null) {
         if ($methodCode == 0) {
+//            echo $url;
             require $url;
         } else if ($methodCode == 1) {
             require $this->analyzeUrl($url);
@@ -71,7 +72,7 @@ class ClassLoader {
                 $path = HELPER_ROOT . $path;
             } else if ($array[0] == 'Util') {
                 $path = UTIL_ROOT . $path;
-            } else{
+            } else {
                 throw new Exception('路径字符串错误');
             }
             return $path;
@@ -79,8 +80,12 @@ class ClassLoader {
         throw new Exception('无法解析为空的路径');
     }
 
-    public static function loadClass() {
-        $this->load(ClassToLoad);
+    public function loadClass($classLoad = null) {
+        if (!$classLoad) {
+            throw new Exception('传入为空');
+        }else {
+            $this->load($classLoad);
+        }
     }
 
 }

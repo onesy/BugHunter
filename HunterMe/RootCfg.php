@@ -9,13 +9,14 @@ $CfgConfig = array(); //需要加载的配置文件都被定义在这个数组�
  */
 define('COMMON_CFG_FILE_NAME', 'Common_Cfg.php'); //配置文件名定义
 define('DEBUG_CFG_FILE_NAME', 'Debug_Cfg.php'); //配置文件名定义
-define('CLASS_DEFINE_FILE_NAME','ClassDefine_Cfg.php');
+define('CLASS_DEFINE_FILE_NAME','ClassDefine_Cfg.php');//加载文件路径
 
 define('APP_ROOT', dirname ( __FILE__ ) . DIRECTORY_SEPARATOR); //Base路径定义 root_cfg
 define('PROJECT_ROOT', dirname ( __FILE__ ) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR); //Base路径定义 项目根目录
 define('FRAMEWORK_ROOT', PROJECT_ROOT . 'BH_Framework'. DIRECTORY_SEPARATOR); //Base路径定义 framework
-define('COMMON_ROOT', APP_ROOT . 'Common'. DIRECTORY_SEPARATOR); //Base路径定义 common
-define('LOG_ROOT', APP_ROOT . 'Log'. DIRECTORY_SEPARATOR); //Base路径定义 log
+define('COMMON_ROOT', PROJECT_ROOT . 'Common'. DIRECTORY_SEPARATOR); //Base路径定义 common
+define('LOG_ROOT', PROJECT_ROOT . 'Log'. DIRECTORY_SEPARATOR); //Base路径定义 log
+define('CLASS_LOADER_PATH',FRAMEWORK_ROOT . 'BH_ClassLoader' . DIRECTORY_SEPARATOR . 'BH_ClassLoader.php');
 // 应用分层结构路径的配置 start
 define('CONTROLLER_ROOT',APP_ROOT . 'Controller' . DIRECTORY_SEPARATOR);// Base路径定义 Controller根路径定义
 define('VIEW_ROOT', APP_ROOT . 'Page' . DIRECTORY_SEPARATOR . 'View' . DIRECTORY_SEPARATOR); //Base路径定义 View根路径定义
@@ -31,6 +32,8 @@ define('CLASS_DEFINE', APP_ROOT . CLASS_DEFINE_FILE_NAME);
 //------------------------需要加载的文件在这里被放入变量中--------------------//
 $CfgConfig[] = COMMON_CFG_PATH;
 $CfgConfig[] = DEBUG_CFG_PATH;
+$CfgConfig[] = CLASS_LOADER_PATH;
+$CfgConfig[] = CLASS_DEFINE;
 //----------------------------------------------------------------------//
 ConfigLoader($CfgConfig);//加载配置文件
 
