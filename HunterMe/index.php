@@ -10,12 +10,10 @@ require_once 'Common_Cfg.php';           // 通用配置文件，通常不许要
 if (defined(DEBUG) && DEBUG) {
     require_once 'Debug_Cfg.php';        // 调试配置文件
 }
-require_once 'RootCfg.php';              // 加载配置文件
-
-
-
+require_once 'RootCfg.php';              // 加载配置文件，并加载类
+require FRAMEWORK_ROOT . 'BH_Frameworks' . DIRECTORY_SEPARATOR . 'BH_FrameworkLoader.php';
 /**
  * 初始化请求和框架的基本信息
  */
-
+//echo '<br /><hr/>' . substr($_SERVER['PHP_SELF'], 0, strrpos($_SERVER['PHP_SELF'], '/') + 1);
 ?>

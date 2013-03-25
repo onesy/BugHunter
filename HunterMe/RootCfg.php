@@ -51,7 +51,7 @@ function ConfigLoader($CfgArray = array()) {
         $CfgArray = array($CfgArray);
         ConfigLoader($CfgArray);
     } else {
-        echo "参数错误，ConfigLoader加载配置文件失败，程序即将退出 文件：" . __FILE__ . "行数：" . __LINE__;
+        echo "<br/>参数错误，ConfigLoader加载配置文件失败，程序即将退出 文件：" . __FILE__ . "行数：" . __LINE__;
     }
 }
 

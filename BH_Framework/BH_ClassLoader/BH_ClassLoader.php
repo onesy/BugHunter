@@ -43,11 +43,11 @@ class ClassLoader {
             require $this->analyzeUrl($url);
         } else if ($methodCode == 2) {
             /**
-             * TODO 待开发,按照文件夹进行加载，一次性加载文件夹内所有的php文件
+             * @todo 待开发,按照文件夹进行加载，一次性加载文件夹内所有的php文件
              */
         } else if ($methodCode == 3) {
             /**
-             * TODO 待开发，一次性全部加载所有的Common下的.php文件
+             * @todo 待开发，一次性全部加载所有的Common下的.php文件
              */
         }
     }
