@@ -30,6 +30,7 @@ define('COMMON_CFG_PATH', APP_ROOT . COMMON_CFG_FILE_NAME); //全路径定义
 define('DEBUG_CFG_PATH', APP_ROOT . DEBUG_CFG_FILE_NAME); //全路径定义
 define('CLASS_DEFINE', APP_ROOT . CLASS_DEFINE_FILE_NAME);
 //------------------------需要加载的文件在这里被放入变量中--------------------//
+echo 'loading.....';
 $CfgConfig[] = COMMON_CFG_PATH;
 $CfgConfig[] = DEBUG_CFG_PATH;
 $CfgConfig[] = CLASS_LOADER_PATH;
