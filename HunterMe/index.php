@@ -12,6 +12,7 @@ if (defined(DEBUG) && DEBUG) {
 }
 require_once 'RootCfg.php';              // 加载配置文件，并加载类
 require FRAMEWORK_ROOT . 'BH_Frameworks' . DIRECTORY_SEPARATOR . 'BH_FrameworkLoader.php';
+echo 'index loading...';
 /**
  * 初始化请求和框架的基本信息
  */

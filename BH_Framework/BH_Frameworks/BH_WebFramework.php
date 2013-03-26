@@ -4,5 +4,6 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-var_dump($_SERVER);
+#var_dump($_SERVER);
+echo '<br/> BH_Frameworks loading...'
 ?>
