@@ -5,6 +5,7 @@
  * 1.配置文件
  * 2.加载类加载器
  */
+$ServerReq = array();
 define('DEBUG', true);
 require_once 'Common_Cfg.php';           // 通用配置文件，通常不许要更改 
 if (defined(DEBUG) && DEBUG) {
